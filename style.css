@@ -1,0 +1,127 @@
+body{
+    background-image:url("assets/Oyster_back.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-blend-mode: lighten;
+    background-color:#6db18f9f;
+}
+h1{
+    font-family: "joschmi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 270%;
+    margin:0%;
+}
+h2{
+    font-family: "joschmi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 170%;
+}
+p{
+    font-family: "noka", sans-serif;
+    font-size: 110%;
+    font-weight: 500;
+    font-style: normal;
+}
+fieldset{
+    width:70vw;
+    height:75vh;
+    background-image: url("assets/BackAsset.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin:auto;
+    border:none;
+}
+.pageContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alignment{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:15% auto;
+    row-gap: 40px;
+    font-family: "noka", sans-serif;
+    font-size: 150%;
+    font-weight: 600;
+    font-style: normal;
+}
+.Opt1{
+    display:flex;
+    flex-direction: row;
+}
+.Opt2{
+    display:flex;
+    flex-direction: row;
+}
+.Opt3{
+    display:flex;
+    flex-direction: row;
+}
+
+#reward{
+    width:400px;
+    height:500px; 
+    /* visibility: hidden; */
+    display:none;
+}
+
+canvas{
+    width:95vw;
+    height:130vh;
+    position:absolute;
+    top:0;
+    left:10px;
+    display:block;
+}
+
+ul{
+   
+    height:fit-content;
+    width:fit-content;
+    background-image: url("assets/BackAsset.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding:50px 75px 250px;
+    font-family: "noka", sans-serif;
+    font-size: 120%;
+    font-weight: 500;
+    font-style: normal;
+
+}
+.listContainer{
+    width:75vw;
+    height:75vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: inherit;
+}
+.backImage-container{
+    display:inline-block;
+    position:relative;
+    
+}
+.backImage-container img{
+    display:block;
+    width:75%;
+    height:100vh;
+}
+.overlayText{
+    position:absolute;
+    width:55%;
+    height:70vh;
+    top: 14%; 
+    left: 7%; 
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+.overlayText::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (){
                 visit++;
                 let text = visit.toString();
                 sessionStorage.setItem("secvisit", text);
-                 window.location.href ="two.html";
+                 window.location.href ="three.html";
               
             
             }

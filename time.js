@@ -24,14 +24,18 @@ const beforeunload = function() {
 
     // elapsedTime contains the time spent on page in milliseconds.
     //passedTime rounds the time into intigers.
-    if(page ==="http://127.0.0.1:5500/two.html"){
+    if(page.indexOf("two.html") != -1){
          var passedTime = Math.round(elapsedTime/1000);
         let time = passedTime.toString();
         localStorage.setItem("timeSpent",time);
     }
-   
+    if(page.indexOf("three.html") != -1){
+        var passedTime = Math.round(elapsedTime/1000);
+        let time = passedTime.toString();
+        localStorage.setItem("pg3Spent",time);
+    }
 
-    if(page === "http://127.0.0.1:5500/four.html"){
+    if(page.indexOf("four.html") != -1){
         console.log("match!");
         var passedTime = Math.round(elapsedTime/1000);
         let time = passedTime.toString();
@@ -40,12 +44,6 @@ const beforeunload = function() {
     
 };
 
-document.addEventListener("DOMContentLoaded", function(){
-    console.log(page);
-    if(page === "http://127.0.0.1:5500/four.html"){
-        console.log("match!");
-    }
-})
 
 window.addEventListener('focus', focus);
 window.addEventListener('blur', blur);

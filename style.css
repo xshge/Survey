@@ -33,6 +33,20 @@ fieldset{
     margin:auto;
     border:none;
 }
+a{
+    position:absolute;
+    bottom: 8px;
+    right: 16px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    padding-top: 6%;
+}
+.container h1{
+    padding-left: 3%;
+    color:#ca0b21;
+}
 .pageContainer{
     display: flex;
     flex-direction: column;
@@ -80,27 +94,20 @@ canvas{
     display:block;
 }
 
-ul{
-   
-    height:fit-content;
+
+.listContainer{
     width:fit-content;
-    background-image: url("assets/BackAsset.png");
-    background-size:contain;
-    background-repeat: no-repeat;
-    padding:50px 75px 250px;
+    height:75vh;
+    position:absolute;
+    top: 14%; 
+    left: 7%; 
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: space-around;
     font-family: "noka", sans-serif;
     font-size: 120%;
     font-weight: 500;
     font-style: normal;
-
-}
-.listContainer{
-    width:75vw;
-    height:75vh;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: inherit;
 }
 .backImage-container{
     display:inline-block;
@@ -124,4 +131,7 @@ ul{
 }
 .overlayText::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
+}
+.overlayText h2{
+    color:#d7710c;
 }

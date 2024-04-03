@@ -13,7 +13,11 @@ let setInter;
 
 function startBounce(){
     if(!setInter){
-        setInter= setInterval(draw, 10);
+        if(sessionStorage.length == 3){
+            setInter= setInterval(draw, 10);
+            console.log("Started!");
+        }
+        
     }
 }
 

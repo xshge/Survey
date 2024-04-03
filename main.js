@@ -31,20 +31,31 @@ document.addEventListener("DOMContentLoaded", function (){
     }
   }) 
 
+
+  let pg1Time = localStorage.getItem("timeSpent");
+  let pg2Time = localStorage.getItem("pg4Spent");
+  let pg3Time = localStorage.getItem("pg3Spent");
+
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
       //  console.log(sessionStorage.length);
-      
-        if(sessionStorage.length == 3){
-        document.getElementById("reward").style.display="block";
-        console.log("Completed!");
-        }
+      determineReward();
       // for (let i = 0; i < sessionStorage.length; i++) {
       //   console.log(sessionStorage.getItem(sessionStorage.key(i)));
       // }
       console.log(localStorage.getItem("timeSpent"));
       console.log(localStorage.getItem("pg4Spent"));
+      console.log(localStorage.getItem("pg3Spent"));
     }
   };
 
+  function determineReward(){
+    var firstT = Number(pg1Time);
+    var secT = Number(pg2Time);
+    var thirT = Number(pg3Time);
+      if(firstT + secT + thirT >= 110){
+        document.getElementById("reward").style.display="block";
+        console.log("Completed!");
+      }
+  }
 

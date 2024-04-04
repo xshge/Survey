@@ -5,6 +5,17 @@ body{
     background-blend-mode: lighten;
     background-color:#6db18f9f;
 }
+a{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url("assets/lildude1.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    font-family: "joschmi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 h1{
     font-family: "joschmi", sans-serif;
     font-weight: 400;
@@ -36,7 +47,7 @@ fieldset{
 a{
     position:absolute;
     bottom: 8px;
-    right: 16px;
+    right: 16%;
 }
 .container{
     display:flex;
@@ -79,12 +90,17 @@ a{
 }
 
 #reward{
-    width:400px;
-    height:500px; 
+    width:50%;
+    height:fit-content; 
     /* visibility: hidden; */
     display:none;
 }
-
+.sources{
+    display:none;
+}
+#title{
+    display:none; 
+}
 canvas{
     width:95vw;
     height:130vh;
@@ -134,4 +150,10 @@ canvas{
 }
 .overlayText h2{
     color:#d7710c;
+}
+
+.credits{
+    display:flex;
+    flex-direction: column;
+   align-items: center;
 }

@@ -53,8 +53,13 @@ document.onreadystatechange = () => {
     var firstT = Number(pg1Time);
     var secT = Number(pg2Time);
     var thirT = Number(pg3Time);
+    const sources = document.getElementsByClassName("sources");
       if(firstT + secT + thirT >= 110){
         document.getElementById("reward").style.display="block";
+        document.getElementById("title").style.display="inline";
+        for (var i = 0; i < sources.length; i++){
+          sources[i].style.display ="inline"; 
+        }
         console.log("Completed!");
       }
   }

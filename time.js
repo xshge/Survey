@@ -5,8 +5,10 @@ let startDate = new Date();
 let elapsedTime = 0;
 let page = window.location.href;
 
-//calculates the time that you spend on the tab. 
+//calculates the time that you spend on the tab. Credit to martpie's answer on this StackOverflow thread :https://stackoverflow.com/questions/4667068/how-to-measure-a-time-spent-on-a-page
+//with some modification to fit the goal of mine. 
 const focus = function() {
+    //update the time when user first open the page
     startDate = new Date();
 };
 
@@ -18,6 +20,7 @@ const blur = function() {
 };
 
 const beforeunload = function() {
+    //get the time when user is about to leave the page, then subtract the time when user first opened the page. 
     const endDate = new Date();
     const spentTime = endDate.getTime() - startDate.getTime();
     elapsedTime += spentTime;
@@ -48,4 +51,3 @@ const beforeunload = function() {
 window.addEventListener('focus', focus);
 window.addEventListener('blur', blur);
 window.addEventListener('beforeunload', beforeunload);
-// console.log(elapsedTime);

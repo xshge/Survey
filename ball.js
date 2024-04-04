@@ -7,17 +7,25 @@ let ballRadius = 3;
 let Dy = 0.5;
 let DX = 0.1;
 let Gravity = 0.1;
-let Weight = 7;
+let Weight = 10;
 let bounceCount = 0;
 let setInter;
 
 function startBounce(){
+    var firstT = Number(pg1Time);
+    var secT = Number(pg2Time);
+    var thirT = Number(pg3Time);
+
     if(!setInter){
         if(sessionStorage.length == 3){
             setInter= setInterval(draw, 10);
-            console.log("Started!");
+            
         }
         
+    }
+    if(firstT + secT + thirT >= 110){
+        canvas.style.height = "264vh";
+        console.log("Changed Height!");
     }
 }
 
@@ -32,7 +40,7 @@ function drawBall(){
     ctx.fill();
     ctx.strokeStyle = "pink";
     ctx.stroke();
-    // ctx.closePath();
+   
 }
 
 function draw(){
@@ -53,7 +61,6 @@ function draw(){
         
         Dy += Gravity * Weight;
         y += Dy;
-        // console.log(Dy);
         
 
         if(y + Dy > canvas.height || y + Dy <= 0 ){
@@ -70,7 +77,8 @@ function draw(){
                 Dy = 0;
                 Gravity = 0;
             }
-            console.log(bounceCount);
+            //for debug
+            // console.log(bounceCount);
         }
 }
 function stopBounce(){

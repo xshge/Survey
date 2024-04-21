@@ -32,20 +32,19 @@ document.addEventListener("DOMContentLoaded", function (){
   }) 
 
 
-  let pg1Time = localStorage.getItem("timeSpent");
-  let pg2Time = localStorage.getItem("pg4Spent");
-  let pg3Time = localStorage.getItem("pg3Spent");
+  let pg1Time = sessionStorage.getItem("timeSpent");
+  let pg2Time = sessionStorage.getItem("pg4Spent");
+  let pg3Time = sessionStorage.getItem("pg3Spent");
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
       //  console.log(sessionStorage.length);
       determineReward();
-      // for (let i = 0; i < sessionStorage.length; i++) {
-      //   console.log(sessionStorage.getItem(sessionStorage.key(i)));
-      // }
-      console.log(localStorage.getItem("timeSpent"));
-      console.log(localStorage.getItem("pg4Spent"));
-      console.log(localStorage.getItem("pg3Spent"));
+      
+      //for debugging.
+      // console.log(sessionStorage.getItem("timeSpent"));
+      // console.log(sessionStorage.getItem("pg4Spent"));
+      // console.log(sessionStorage.getItem("pg3Spent"));
     }
   };
 

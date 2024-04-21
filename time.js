@@ -30,19 +30,19 @@ const beforeunload = function() {
     if(page.indexOf("two.html") != -1){
          var passedTime = Math.round(elapsedTime/1000);
         let time = passedTime.toString();
-        localStorage.setItem("timeSpent",time);
+        sessionStorage.setItem("timeSpent",time);
     }
     if(page.indexOf("three.html") != -1){
         var passedTime = Math.round(elapsedTime/1000);
         let time = passedTime.toString();
-        localStorage.setItem("pg3Spent",time);
+        sessionStorage.setItem("pg3Spent",time);
     }
 
     if(page.indexOf("four.html") != -1){
         console.log("match!");
         var passedTime = Math.round(elapsedTime/1000);
         let time = passedTime.toString();
-        localStorage.setItem("pg4Spent",time);
+        sessionStorage.setItem("pg4Spent",time);
     }
     
 };
